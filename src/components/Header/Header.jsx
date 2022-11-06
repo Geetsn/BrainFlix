@@ -9,8 +9,8 @@ function Header(props) {
          <img src={logo} alt="logo" className='logo'/>
 
           <div className='header-link'>
-              <input className='search' placeholder="&emsp;&emsp;Search" />
-              <img src={avatar} alt="avatar" className='image' />
+            <input className='search' placeholder="&emsp;&emsp;Search" />
+            <img src={avatar} alt="avatar" className='image' />
           </div>
         <Btn className='btn_upload' text="UPLOAD"/>
       </header>

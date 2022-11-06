@@ -1,5 +1,12 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/font' as *;
+
 *{
+  font-family: Avenir, sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -7,6 +14,18 @@
   text-align: center;
   width: 100%;
   // margin: 0 2rem;
+
+  &-link {
+    display: flex;
+    width: 100%;
+    padding: 1rem 0 0 0;
+
+    @include tablet {
+     width: 45%;
+     float: right;
+    }
+    
+  }
 }
 
 .image {
@@ -15,12 +34,9 @@
   border-radius: 50%;
   padding: .2rem;
   margin: 0 0 0 1rem;
-}
 
-.header-link {
-  display: flex;
-  width: 100%;
-  padding: 1rem 0 0 0;
+
+
 }
 
 .search {
@@ -30,4 +46,8 @@
   border-radius: 4px;
   border-color: #E1E1E1;
   width: 90%;
+
+  // @include tablet {
+  //   width: 35%;
+  // }
 }

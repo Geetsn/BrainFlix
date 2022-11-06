@@ -3,6 +3,10 @@
 .btn_upload {
   background-image: url(../../assets/Icons/upload.svg);
   @include btn;
+
+  // @include tablet {
+  //   width: 50%;
+  // }
 }
 
 .btn_comment{

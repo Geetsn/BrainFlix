@@ -1,0 +1,52 @@
+.main {
+  width: 100%;
+  // padding: 1rem;
+
+  &-image{
+    width: 100%;
+    height: 100%;
+  }
+  &-title {
+    padding: .5rem;
+    text-align: left;
+    border-bottom: 1px solid #E1E1E1;
+  }
+  &-details {
+    display: flex;
+    padding: 1rem;
+    border-bottom:1px solid #E1E1E1;
+  }
+  &-detail {
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  &-detail__subtitle {
+    margin: 0;
+  }
+
+  &-detail__date {
+    color: #AFAFAF;
+    margin: 16px 0;
+    // padding: .5rem;
+  }
+
+  &-detail__views {
+    color: #AFAFAF;
+    margin: 0;
+  }
+
+  &-details__likes {
+    // padding: 1rem;
+    color: #AFAFAF;
+    // margin: .5rem;
+
+  }
+
+  &-text {
+    padding: 1rem;
+  }
+
+}

@@ -1,0 +1,26 @@
+@use './variables' as *;
+
+@mixin tablet {
+  @media (min-width: variables.$tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: variables.$desktop-width){
+    @content;
+  }
+} 
+
+@mixin btn{
+  background-repeat: no-repeat;
+  background-color: #0095FF;
+  background-position: 1rem;
+  border-radius: 4px;
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}

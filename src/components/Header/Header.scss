@@ -11,20 +11,30 @@
 
 .header {
   padding: 2rem 1rem;
-  text-align: center;
-  width: 100%;
-  // margin: 0 2rem;
 
-  &-link {
-    display: flex;
+  &-wrap {
     width: 100%;
-    padding: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+  }
+  &-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 
     @include tablet {
-     width: 45%;
-     float: right;
+flex-direction: row;
+
+    //  justify-content: space-between;
+    //  padding: 0 3rem;
+
     }
-    
+
+    @include desktop {
+      padding: 0 3rem;
+
+    }
   }
 }
 
@@ -32,10 +42,26 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  padding: .2rem;
-  margin: 0 0 0 1rem;
+  // padding: .2rem;
+  margin: 1rem 0 1rem 1rem;
 
-
+  &-mobile{
+    @include tablet{
+      display: none;
+    }
+  }
+  &-tablet{
+    display: none;
+    @include tablet{
+      display: inline-block;
+    }
+  }
+  @include tablet {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    order: 4;
+  }
 
 }
 
@@ -46,8 +72,16 @@
   border-radius: 4px;
   border-color: #E1E1E1;
   width: 90%;
+  padding: .5rem;
+  
 
-  // @include tablet {
-  //   width: 35%;
-  // }
+  @include tablet {
+    width: 40%;
+    order: 2;
+    margin-left: 8rem;
+  }
+
+  @include desktop {
+    margin-left: 15rem;
+  }
 }

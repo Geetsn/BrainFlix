@@ -1,7 +1,11 @@
+@use '../../styles/partials/mixins' as *;
+
 .comments {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: 1rem;
+
+
 }
 
 .comment {
@@ -15,10 +19,18 @@
     height: 36px;
     border-radius: 50%;
     margin-top: 1rem;
+
+    @include tablet {
+      padding: 1rem;
+    }
   }
   
   &-div__one {
     padding: 0 1rem;
+
+    @include desktop {
+      padding: 1rem;
+    }
   }
 
   &-div__two {
@@ -33,5 +45,9 @@
 
   &-text {
     margin: 0 0 1rem 0;
+
+    @include desktop {
+      padding: 1rem 0;
+    }
   }
 }

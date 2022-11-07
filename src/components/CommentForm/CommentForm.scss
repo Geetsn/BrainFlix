@@ -1,26 +1,47 @@
+@use '../../styles/partials/mixins' as *;
+
 .form {
   padding: 0 1rem 1rem 1rem;
   width: 100%;
-  border-bottom: 1px solid #E1E1E1;;
+  border-bottom: 1px solid #E1E1E1;
 
   &-container {
     display: flex;
+    flex-direction: row;
+
+    @include tablet{
+      flex-wrap: wrap
+    }
   }
 
-  // &-container__image {
-  //   padding-top: 3rem;
-  //   margin: 0;
-  // }
+  &-title {
+    padding: 0 1rem;
+
+    @include tablet {
+      
+    }
+  }
+ 
 
   &-container__conv {
-    width: 100%;
+    // width: 100%;
+
+    @include tablet {
+      // width: 90%;
+    }
+
+    @include desktop{
+      
+    }
   }
 
   &-container__title {
-    // padding-bottom: 1rem;
     color: #AFAFAF;
     font-weight: bold;
-    // margin: 1rem;
+
+    @include tablet {
+      
+    }
   }
 
   &-container__text {
@@ -31,9 +52,18 @@
     border-color: #AFAFAF;
     padding: 1rem;
     margin: .5rem 0 0 0;
+
+    @include tablet {
+      width: 60%;
+      height: 3rem;
+      padding: 1rem;
+    }
+
+    @include desktop {
+      width: 50%;
+      height: 1rem;
+    }
   }
 }
 
-// .image {
-//   padding: 1rem;
-// }
+

@@ -1,14 +1,17 @@
+@use '../../styles/partials/mixins' as *;
+
 .vids {
   padding: 1rem;
 
   &-title {
     color: #AFAFAF;
-    padding-top: 0;
+    padding: 0 0 .5rem .5rem;
     margin-top: 0;
   }
 
   &-details {
     display: flex;
+    padding: .5rem;
   }
 
   &-image {
@@ -29,5 +32,10 @@
   &-description__text {
     margin: 0 0 .5rem 0;
     padding:1rem 0 1rem 1rem;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
   }
 }

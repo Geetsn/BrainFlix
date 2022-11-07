@@ -2,7 +2,6 @@
 
 .main {
   width: 100%;
-  // padding: 1rem;
 
   &-image{
     width: 100%;
@@ -33,24 +32,27 @@
   }
   &-details {
     display: flex;
-    padding: 1rem;
     border-bottom:1px solid #E1E1E1;
 
     @include tablet {
-      padding-left: 2rem;
-    }
-
-    @include desktop {
-      // width: 70%;
+      width: 100%;
     }
   }
+
   &-detail {
     text-align: left;
-    width: 50%;
-    // display: flex;
-    // flex-direction: column;
-    // flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+
+    @include tablet {
+      flex-direction: row;
+      padding-left: 0;
+    }
   }
+
   &-detail__subtitle {
     margin: 0;
   }
@@ -58,10 +60,10 @@
   &-detail__date {
     color: #AFAFAF;
     margin: 16px 0;
-    // padding: .5rem;
 
     @include tablet {
       order: 2;
+      margin: 0;
     }
   }
 
@@ -71,9 +73,7 @@
   }
 
   &-details__likes {
-    // padding: 1rem;
     color: #AFAFAF;
-    // margin: .5rem;
     @include tablet {
       order: 4;
     }
@@ -84,10 +84,6 @@
 
     @include tablet {
       padding:1rem 2rem;
-    }
-
-    @include desktop {
-      // width: 70%;
     }
   }
 

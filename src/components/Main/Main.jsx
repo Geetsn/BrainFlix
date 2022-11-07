@@ -26,7 +26,7 @@ function Main (props) {
         </div>
         <div className='main-detail'>
           <p className='main-detail__views'><img src={viewIcon}/> {activeVideo.views}</p>
-          <p className='main-details__likes'><img src={likeIcon}/>{activeVideo.likes}</p>
+          <p className='main-details__likes'><img src={likeIcon}/>&nbsp;{activeVideo.likes}</p>
         </div>
       </div>
       <p className='main-text'>{activeVideo.description}</p>

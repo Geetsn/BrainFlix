@@ -1,13 +1,17 @@
 @use '../../styles/partials/mixins' as *;
 
+.image{
+  margin-right: 1rem;
+}
+
 .form {
   padding: 0 1rem 1rem 1rem;
   width: 100%;
   border-bottom: 1px solid #E1E1E1;
+  display: flex;
+  justify-content: space-between;
 
   &-container {
-    display: flex;
-    flex-direction: row;
 
     @include tablet{
       flex-wrap: wrap
@@ -24,7 +28,7 @@
  
 
   &-container__conv {
-    // width: 100%;
+    width: 98%;
 
     @include tablet {
       // width: 90%;

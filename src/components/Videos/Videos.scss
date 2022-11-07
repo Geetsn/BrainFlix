@@ -15,6 +15,8 @@
   }
 
   &-image {
+    object-fit: cover;
+    flex-shrink: 0;
     width: 150px;
     height: 90px;
     border-radius: 4px;
@@ -32,10 +34,5 @@
   &-description__text {
     margin: 0 0 .5rem 0;
     padding:1rem 0 1rem 1rem;
-  }
-
-  @include desktop {
-    display: flex;
-    flex-direction: column;
   }
 }

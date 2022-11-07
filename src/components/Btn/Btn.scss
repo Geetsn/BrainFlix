@@ -13,7 +13,6 @@
   }
 
   @include desktop {
-    // padding-bottom: 2rem;
     margin-top: 0;
   }
 }
@@ -22,7 +21,6 @@
   background-image: url(../../assets/Icons/add_comment.svg);
   @include btn;
   width: 100%;
-  // float: right;
 
   @include tablet {
     width: 25%;
@@ -31,7 +29,6 @@
   };
 
   @include desktop {
-    width: 15%;
+    width: 150px;
   }
-  
 }

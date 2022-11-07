@@ -18,21 +18,27 @@ function Main (props) {
   return (
     <section className='main'>
       <video className='main-image' poster={activeVideo.image} controls></video>
-      <h1 className='main-title'>{activeVideo.title}</h1>
-      <div className='main-details'>
-        <div className='main-detail'>
-          <h4 className='main-detail__subtitle'>By {activeVideo.channel}</h4>
-          <p className='main-detail__date'>{new Date(activeVideo.timestamp).toLocaleDateString() }</p>
+      <div className='main_part'>
+        <div className='main_part_descCom'>
+          <h1 className='main-title'>{activeVideo.title}</h1>
+          <div className='main-details'>
+            <div className='main-detail'>
+              <h4 className='main-detail__subtitle'>By {activeVideo.channel}</h4>
+              <p className='main-detail__date'>{new Date(activeVideo.timestamp).toLocaleDateString() }</p>
+            </div>
+            <div className='main-detail'>
+              <p className='main-detail__views'><img src={viewIcon}/> {activeVideo.views}</p>
+              <p className='main-details__likes'><img src={likeIcon}/>&nbsp;{activeVideo.likes}</p>
+            </div>
+          </div>
+          
+          <p className='main-text'>{activeVideo.description}</p>
+          <CommentForm />
+          <Comments Comments={activeVideo.comments} />
         </div>
-        <div className='main-detail'>
-          <p className='main-detail__views'><img src={viewIcon}/> {activeVideo.views}</p>
-          <p className='main-details__likes'><img src={likeIcon}/>&nbsp;{activeVideo.likes}</p>
-        </div>
+          
+        <Videos id={activeVideo.id} handle={handleVideoClick} />
       </div>
-      <p className='main-text'>{activeVideo.description}</p>
-      <CommentForm />
-      <Comments Comments={activeVideo.comments} />
-      <Videos id={activeVideo.id} handle={handleVideoClick} />
     </section>
 
   )

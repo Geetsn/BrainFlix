@@ -87,4 +87,17 @@
     }
   }
 
+  &_part{
+    @include desktop{
+      display: flex;
+      padding: 0 7rem;
+    }
+
+    &_descCom{
+      width: 97%;
+      border-right: 1px solid #E1E1E1;
+    }
+  }
+
+
 }

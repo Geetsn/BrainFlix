@@ -1,0 +1,73 @@
+@use '../../styles/partials/mixins' as *;
+
+.image{
+  margin-right: 1rem;
+}
+
+.form {
+  padding: 0 1rem 1rem 1rem;
+  width: 100%;
+  border-bottom: 1px solid #E1E1E1;
+  display: flex;
+  justify-content: space-between;
+
+  &-container {
+
+    @include tablet{
+      flex-wrap: wrap
+    }
+  }
+
+  &-title {
+    padding: 0 1rem;
+
+    @include tablet {
+      
+    }
+  }
+ 
+
+  &-container__conv {
+    width: 98%;
+
+    @include tablet {
+      // width: 90%;
+    }
+
+    @include desktop{
+      
+    }
+  }
+
+  &-container__title {
+    color: #AFAFAF;
+    font-weight: bold;
+
+    @include tablet {
+      
+    }
+  }
+
+  &-container__text {
+    width: 100%;
+    resize:none ;
+    background-color: #FAFAFA;
+    border-radius: 4px;
+    border-color: #AFAFAF;
+    padding: 1rem;
+    margin: .5rem 0 0 0;
+
+    @include tablet {
+      width: 60%;
+      height: 3rem;
+      padding: 1rem;
+    }
+
+    @include desktop {
+      width: 50%;
+      height: 1rem;
+    }
+  }
+}
+
+

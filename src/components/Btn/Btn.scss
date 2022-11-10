@@ -1,0 +1,46 @@
+@use '../../styles/partials/mixins' as *;
+
+.btn_upload {
+  background-image: url(../../assets/Icons/upload.svg);
+  @include btn;
+  width: 100%;
+
+  @include tablet {
+    width: 20%;
+    padding: .7rem 2.5rem;
+    margin-top: 0;
+    order: 3;
+  }
+
+  @include desktop {
+    margin-top: 0;
+  }
+}
+
+.btn_comment{
+  background-image: url(../../assets/Icons/add_comment.svg);
+  @include btn;
+  width: 100%;
+
+  @include tablet {
+    width: 25%;
+    float: right;
+    margin-top: 0
+  };
+
+  @include desktop {
+    width: 150px;
+  }
+}
+
+.btn_publish {
+  background-image: url(../../assets/Icons/publish.svg) ;
+  @include btn;
+  width: 100%;
+
+  @include tablet {
+    width: 25%;
+    float: right;
+  }
+}
+

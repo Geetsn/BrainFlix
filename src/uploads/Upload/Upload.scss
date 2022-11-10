@@ -1,0 +1,125 @@
+@use '../../styles/partials/mixins' as *;
+
+.upload {
+  padding: 2rem;
+  
+&__container{
+  @include desktop{
+    margin: 0 auto;
+    max-width: 1152px;
+  }
+}
+  @include desktop {
+    padding: 0 4rem;
+  }
+
+  &-title {
+    padding: 0;
+    @include tablet {
+      padding:0 0 2rem 0;
+      border-bottom: 1px solid #E1E1E1;
+    }
+
+    @include desktop {
+      padding: 2rem 0 1rem 0;;
+    }
+  }
+
+  &-details {
+    @include desktop {
+      display: flex;
+      padding: 1rem;
+      gap: 1rem;
+    }
+  }
+
+  &-subtitle {
+    color: #AFAFAF;
+    padding: 1rem 0 .5rem 0;
+  }
+
+  &-thumbnail {
+    width: 100%;
+    border-radius: 4px;
+
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  &-details__section {
+    @include desktop {
+      width: 500px;
+    }
+  }
+
+  &-form__section {
+    @include desktop {
+     width: 100%;
+    }
+  }
+
+  &-form {
+    @include tablet {
+      border-bottom: 1px solid #E1E1E1;
+      padding-bottom: 1rem;
+    }
+
+    @include desktop {
+      width: 100%;
+      border: none;
+    }
+
+  }
+
+  &-form__title {
+    color: #AFAFAF;
+    padding: 1rem 0 .7rem 0;
+  }
+
+  &-form__input {
+    width: 100%;
+    padding: .5em;
+    border-color: #AFAFAF;
+    border-radius: 4px;
+  }
+
+  &-form__text {
+    width: 100%;
+    padding: .5rem;
+    border-color: #AFAFAF;
+    border-radius: 4px;
+    resize: none;
+
+    @include tablet {
+      border-bottom: 1px solid #E1E1E1;
+
+    }
+    @include desktop {
+     
+    }
+
+   
+  }
+ 
+
+  &-btn {
+    background-color: white;
+    color:#0095FF;
+    border: none;
+    font-weight: bold;
+    padding: 1rem;
+    width: 100%;
+
+    @include tablet {
+      // padding: .5rem;
+      width: 25%;
+      margin: 1rem 0 0 27rem;
+      padding-right: 0;
+    }
+
+    @include desktop {
+      margin: 1rem 0 0 20rem;
+    }
+  }
+}

@@ -10,8 +10,15 @@
   }
 
   &-details {
+    width: 100%;
     display: flex;
     padding: .5rem;
+  }
+
+  &-details__section {
+    display: flex;
+    text-decoration: none;
+    color: #000;
   }
 
   &-image {

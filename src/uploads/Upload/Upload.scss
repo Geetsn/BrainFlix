@@ -3,18 +3,17 @@
 .upload {
   padding: 2rem;
   
-&__container{
+  &__container{
   @include desktop{
     margin: 0 auto;
     max-width: 1152px;
-  }
-}
-  @include desktop {
     padding: 0 4rem;
+  }
   }
 
   &-title {
     padding: 0;
+    
     @include tablet {
       padding:0 0 2rem 0;
       border-bottom: 1px solid #E1E1E1;
@@ -42,6 +41,10 @@
     width: 100%;
     border-radius: 4px;
 
+    @include tablet {
+      width: 50vh;
+    }
+
     @include desktop {
       width: 100%;
     }
@@ -50,6 +53,8 @@
   &-details__section {
     @include desktop {
       width: 500px;
+      height: 242px;
+      border-bottom: 1px solid #E1E1E1;
     }
   }
 
@@ -68,8 +73,8 @@
     @include desktop {
       width: 100%;
       border: none;
+      border-bottom: 1px solid #E1E1E1;
     }
-
   }
 
   &-form__title {
@@ -93,16 +98,9 @@
 
     @include tablet {
       border-bottom: 1px solid #E1E1E1;
-
     }
-    @include desktop {
-     
-    }
-
-   
   }
  
-
   &-btn {
     background-color: white;
     color:#0095FF;
@@ -111,10 +109,13 @@
     padding: 1rem;
     width: 100%;
 
+    &:hover {
+      background-color: #0065AD;
+    }
+
     @include tablet {
-      // padding: .5rem;
       width: 25%;
-      margin: 1rem 0 0 27rem;
+      margin: 1rem 0 0 18rem;
       padding-right: 0;
     }
 

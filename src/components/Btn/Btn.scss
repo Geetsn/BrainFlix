@@ -4,16 +4,19 @@
   background-image: url(../../assets/Icons/upload.svg);
   @include btn;
   width: 100%;
+  &:hover {
+    background-color: #0065AD;
+  }
 
   @include tablet {
-    width: 20%;
     padding: .7rem 2.5rem;
     margin-top: 0;
     order: 3;
   }
 
   @include desktop {
-    margin-top: 0;
+   width: auto;
+   padding: .7rem 2.5rem;
   }
 }
 
@@ -21,15 +24,18 @@
   background-image: url(../../assets/Icons/add_comment.svg);
   @include btn;
   width: 100%;
+  &:hover {
+    background-color: #0065AD;
+  }
 
   @include tablet {
-    width: 25%;
+    width: 30%;
     float: right;
     margin-top: 0
-  };
+  }
 
   @include desktop {
-    width: 150px;
+    width: 170px;
   }
 }
 
@@ -37,10 +43,12 @@
   background-image: url(../../assets/Icons/publish.svg) ;
   @include btn;
   width: 100%;
+  &:hover {
+    background-color: #0065AD;
+  }
 
   @include tablet {
     width: 25%;
     float: right;
   }
 }
-

@@ -12,7 +12,7 @@ function CommentForm (props) {
         </div>
         <div className='form-container__conv'>
           <h4 className='form-container__title'>JOIN THE CONVERSATION</h4>
-          <textarea className='form-container__text' name="comment" id="" cols="20" rows="5" placeholder="Add a new comment"></textarea>
+          <textarea className='form-container__text' name="comment" id=""  placeholder="Add a new comment"></textarea>
           <Btn className='btn_comment' text="COMMENT"/>
         </div>
       </form>

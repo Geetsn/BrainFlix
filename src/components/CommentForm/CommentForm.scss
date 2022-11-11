@@ -5,16 +5,18 @@
 }
 
 .form {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem 1rem 0;
   width: 100%;
   border-bottom: 1px solid #E1E1E1;
   display: flex;
   justify-content: space-between;
 
   &-container {
+    padding-top: 1.5rem;
 
     @include tablet{
-      flex-wrap: wrap
+      flex-wrap: wrap;
+      padding-top: 0;
     }
   }
 
@@ -22,20 +24,17 @@
     padding: 0 1rem;
 
     @include tablet {
-      
+      padding-bottom: .5rem;
     }
   }
  
 
   &-container__conv {
     width: 98%;
+    padding-top: 1rem;
 
     @include tablet {
-      // width: 90%;
-    }
-
-    @include desktop{
-      
+      padding-top: 0;
     }
   }
 
@@ -43,8 +42,8 @@
     color: #AFAFAF;
     font-weight: bold;
 
-    @include tablet {
-      
+    @include desktop {
+      padding-bottom: .5rem;
     }
   }
 
@@ -58,16 +57,15 @@
     margin: .5rem 0 0 0;
 
     @include tablet {
-      width: 60%;
+      width: 65%;
       height: 3rem;
-      padding: 1rem;
+      padding: .5rem;
+      margin-top: 0;
     }
 
     @include desktop {
-      width: 50%;
-      height: 1rem;
+      width: 65%;
+      height: 3rem;
     }
   }
 }
-
-

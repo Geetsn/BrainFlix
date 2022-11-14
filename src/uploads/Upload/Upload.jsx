@@ -1,8 +1,17 @@
 import upload  from '../../assets/Images/Upload-video-preview.jpg';
 import Btn from '../../components/Btn/Btn';
 import './Upload.scss';
+import { useNavigate } from 'react-router-dom';
 
 function Upload (props) {
+
+  const navigate = useNavigate();
+  const handleNavigateToHome = () => {
+    alert('upload successfully');
+    navigate('/', {replace : true});
+    console.log('move');
+  }
+
   return(
     <div className='upload'>
       <div className='upload__container'>
@@ -20,7 +29,7 @@ function Upload (props) {
                 <textarea className='upload-form__text' placeholder='Add a description to your video' name="text" id="" cols="15" rows="5"></textarea>
               </div>
               <div className='upload-form__btn'>
-                <Btn className='btn_publish' text='PUBLISH'/>
+                <Btn onClick={() => handleNavigateToHome()} className='btn_publish' text='PUBLISH'/>
                 <button className='upload-btn'>CANCEL</button>
               </div>
             </form>

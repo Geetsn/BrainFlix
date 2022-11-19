@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import viewIcon from '../../assets/Icons/views.svg';
 import likeIcon from '../../assets/Icons/likes.svg';
-import Comments from '../Comments/Comments';
-import CommentForm from '../CommentForm/CommentForm';
-import Videos from '../Videos/Videos';
+import Comments from '../../components/Comments/Comments';
+import CommentForm from '../../components/CommentForm/CommentForm';
+import Videos from '../../components/Videos/Videos';
 import axios from 'axios';
 
 
@@ -14,11 +14,11 @@ function Home (props) {
   const [activeVideo, setActiveVideo] = useState(null);
   const [allVideos, setAllVideos] = useState([]);
 
-  const API_URL = 'https://project-2-api.herokuapp.com/videos?api_key=bfcabaf8-135a-469e-ade7-43d6ac254996';
+  
   useEffect(() => {
-    axios.get('https://project-2-api.herokuapp.com/videos?api_key=bfcabaf8-135a-469e-ade7-43d6ac254996').then(response => {
+    axios.get('http://localhost:8080/videos').then(response => {
      setAllVideos(response.data)
-     console.log(response.data);
+     console.log("get all videos", response.data);
     }).catch(error => 
       console.log(error));
   }, []);
@@ -26,9 +26,9 @@ function Home (props) {
   useEffect(() => {
     let videoId = id || allVideos[0]?.id;
     if (videoId) {
-      axios.get(` https://project-2-api.herokuapp.com/videos/${videoId}?api_key=bfcabaf8-135a-469e-ade7-43d6ac254996`).then(response => {
+      axios.get(`http://localhost:8080/videos/${videoId}`).then(response => {
         setActiveVideo(response.data)
-        console.log(response.data);
+        console.log("get one specific video", response.data);
       });
     }
    }, [id, allVideos]);

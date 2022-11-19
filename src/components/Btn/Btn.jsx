@@ -1,7 +1,7 @@
 import './Btn.scss';
 function Btn(props) {
   
-  return <button onClick = {props.onClick} className={props.className}>{props.text}</button>;
+  return <button type={props.type} onClick = {props.onClick} className={props.className}>{props.text}</button>;
 }
 
 export default Btn;

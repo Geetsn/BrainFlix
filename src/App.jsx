@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import Upload from './uploads/Upload/Upload';
+import Home from './pages/Home/Home';
+import Upload from './pages/Upload/Upload';
 
 function App() {
   return (
